@@ -20,11 +20,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:  
           token: ${{ secrets.BOT }}
       
       - name: Increase version number
-        uses: phips28/gh-action-bump-version@v8.0.12
+        uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.BOT }}
